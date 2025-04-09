@@ -87,6 +87,21 @@
 # print(uniq)
 # "op:[1, 2, 3, 4, 5, 7, 8, 9]"
 
+# Python Today's Task
+#TASK -1 program to separate odd & even elements from list 
+#TASK -2 program to separate unique elements from list and add "*" at EOL
+
+# num=[1, 2, 3, 4, 5, 7, 8, 9]
+# even=[]
+# odd=[]
+# for i in num:
+#     if i%2:
+#         odd.append(i)
+#     else:
+#         even.append(i)
+# print(f"even:{even} odd:{odd}")
+"op:even:[2, 4, 8] odd:[1, 3, 5, 7, 9]"
+
 "find out the unique and no duplicate represent with * end of list "
 
 # num=[1,2,3,4,5,4,2,3,3,3,7,8,9,7]
