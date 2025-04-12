@@ -114,3 +114,12 @@
 #         dup.append("*")
 # print(uniq+dup)
 # "op:[1, 2, 3, 4, 5, 7, 8, 9, '*', '*', '*', '*', '*', '*']"
+
+# dect1={'a':1,'b':2}
+# # dect2=dect1
+# # if dect1==dect2:
+# #     print("true")
+# sum=0
+# for i in dect1:
+#     sum+=dect1[i]
+# print(sum)
