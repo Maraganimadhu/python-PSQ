@@ -123,3 +123,16 @@
 # for i in dect1:
 #     sum+=dect1[i]
 # print(sum)
+
+
+# 16-04-2025
+
+"scope"
+"the posiible to access value or varible "
+"3 types"
+"1 local--->within the block {within the fun only we can access }"
+# def fun():
+#     a=10
+# print(a)
+"2 Enclosed "
+"within in the block we access val or var "
