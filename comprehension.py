@@ -136,3 +136,6 @@
 # print(a)
 "2 Enclosed "
 "within in the block we access val or var "
+
+
+"zip method"

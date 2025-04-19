@@ -320,10 +320,10 @@ employee_list = [
     }
 ]
 
-# name_list=[]
-for i in employee_list:
-    if i['age']>=18:
-        print(i)
+# # name_list=[]
+# for i in employee_list:
+#     if i['age']>=18:
+#         print(i)
     
         
 
