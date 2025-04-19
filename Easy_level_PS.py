@@ -504,3 +504,474 @@
         
         # enter a number6
         #  5
+# --------------------------------------------------------------->Medium<------------------------------------------
+
+# Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+# Examples :
+# toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+# toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots",12]]
+# toArray({}) ➞ []
+
+# dct={ 'shrimp': 15, 'tots': 12 }
+
+# values=list(dct.values())
+# keys=list(dct.keys())
+# res=list()
+# temp_lst=[]
+# for i in range(0,len(dct)):
+#     temp_lst.clear()
+#     temp_lst.append([keys[i],values[i]])
+#     res.extend(temp_lst)
+# print(res)
+## 2nd methoddec={ 'a': 1, 'b': 2 }
+# lst_values=list(dec.values())
+# lst_keys=list(dec)
+# result_lst=list()
+# sub_lst=[]
+# for i in range(len(lst_keys)):
+#     # if (len(sub_lst)!=0):
+#     sub_lst.clear()
+#     sub_lst.append(lst_keys[i])
+#     sub_lst.append(lst_values[i])
+#     result_lst.append(sub_lst)
+#     print(sub_lst)
+# print(result_lst)
+
+# [['shrimp', 15], ['tots', 12]]
+
+# 2 Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+# Examples :
+# arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
+# arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+# arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
+
+# def fun(num, num_times):
+#     lst=[]
+#     res=0
+#     for i in range(num_times):
+#         res+=num
+#         lst.append(res)
+#     return lst
+# num=int(input('enter a number' ))
+# no_times=int(input("enter a number of time add and print"))
+# print("the result is",fun(num,no_times))
+# #enter a number7
+# enter a number of time add and print5
+# the result is [7, 14, 21, 28, 35]
+
+# 3 Create the function that takes an array with objects and returns the sum of people's budgets.
+
+'''Examples :
+getBudgets([
+  { name: "John", age: 21, budget: 23000 },
+  { name: "Steve",  age: 32, budget: 40000 },
+  { name: "Martin",  age: 16, budget: 2700 }
+]) ➞ 65700
+
+getBudgets([
+  { name: "John",  age: 21, budget: 29000 },
+  { name: "Steve",  age: 32, budget: 32000 },
+  { name: "Martin",  age: 16, budget: 1600 }
+]) ➞ 62600'''
+
+# getBudgets=([
+#   { 'name': "John", 'age': 21, 'budget': 23000 },
+#   { 'name': "Steve",  'age': 32, 'budget': 40000 },
+#   { 'name': "Martin",  'age': 16, 'budget': 2700 }])
+
+# def get(getBudgets):
+#     return sum(person['budget'] for person in getBudgets )
+# print(get(getBudgets))
+##65700
+
+
+'''4 Create a function that takes an array of objects like { name: "John", notes: [3, 5, 4]} and returns an array of objects like { name: "John", avgNote: 4 }. If a student has no notes (an empty array) then let's assume avgNote: 0.
+	Example :
+[{ name: "John", notes: [3, 5, 4]}] ➞ [{ name: "John", avgNote: 4 }]'''
+
+# def avrage(dct):
+#     avg_lst=[]
+#     avg_lst.extend(dct['notes'])
+#     return(sum(avg_lst))//3
+
+# print(avrage({ 'name': "John", 'notes': [3, 5, 7]}))
+# 5
+'''4 Create a function that moves all capital letters to the front of a word.
+Examples :
+capToFront("hApPy") ➞ "HAPpy"
+capToFront("moveMENT") ➞ "MENTmove"
+capToFront("shOrtCAKE") ➞ "OCAKEshrt"
+# '''
+# def captofront(arr):
+#     lst=[]
+#     lower=''
+#     res=''
+#     for i in arr:
+#         if i==i.upper():
+#             lst.append(i)
+#         else:
+#             lower+=i
+#     lst.extend(lower)
+#     for j in lst:
+#         res+=j
+#     return res
+# print(captofront('shOrtCAKE'))
+
+##OCAKEshrt
+
+'''6 Count each occurrence of number(can not use predefined function).
+			Input: [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10] , no find=7
+			Output: 1 present 2 times.
+				   2 present 1 times.
+				   3 present 2 times.
+				   5 present 1 times …….  Etc
+'''
+# def count(arr):
+#     set1=set(arr)
+#     for i in set1:
+#         c=0
+#         for j in arr:
+#             if i==j:
+#                 c+=1
+#         print('number is:',i,'times are:',c)
+
+# count([1,6,3,1,5,9,7,2,1,9,3,7,8,9])
+'''number is: 1 times are: 3
+number is: 2 times are: 1
+number is: 3 times are: 2
+number is: 5 times are: 1
+number is: 6 times are: 1
+number is: 7 times are: 2
+number is: 8 times are: 1
+number is: 9 times are: 3'''
+
+''' 7 Write a function that accepts an array of strings. Return the longest string(can not use predefined function).
+
+		Input: [‘nik’, ’mikhil’, ’Cow’,’Elephant’] 							Output: Elephant
+'''
+# def  longest_String(arr):
+#     le=''
+#     for i in arr:
+#         if len(le)<len(i):
+#             le=i
+
+#     return le
+# print(longest_String(['nik', 'mikhil', 'Cow','Elephant']))
+
+## Elephant
+
+
+''' 8 Most Commonly Used two Character in String(can not use predefined function)
+	Input: ‘Hii i am ram’      Output; i, a 
+'''
+'''def recently(str1):
+    unique=list(set(str1))
+    unique.remove(" ")
+    count=[]
+    for i in unique:
+        count.append(str1.count(i))
+    for i in range(len(unique)):
+            for j in range(len(unique)):
+                if count[i]<count[j]:
+                    temp1=count[i]
+                    count[i]=count[j]
+                    count[j]=temp1
+                    # swaping of unique values respected to its count
+                    temp2=unique[i]
+                    unique[i]=unique[j]
+                    unique[j]=temp2
+
+    print(unique[-1],unique[-2])
+recently("Hii i am ram")
+# i m '''
+
+'''9 Write Program to remove duplicate elements in an array and sort it in descending order(can not use predefined function).
+			Input: [5,3,5,2,1,1,7,3,5,6]
+			Output: [7,6,5,32,1]
+'''
+# def non_dup_dis(arr):
+#     set1=set(arr)   ### set is order collection so sort by assinging order
+#     lst=list(set1)
+#     return lst[::-1]
+# print(non_dup_dis([5,3,5,2,1,1,7,3,5,6]))
+# # [7, 6, 5, 3, 2, 1]
+
+''' 10 Write a Program to Remove brackets from an algebraic expression(can not use predefined function).
+			Input: a + b-(9+c)=3
+			Output: a + b- 9+c=3
+'''
+# def remove_brackets(arr):
+#     arr1=''
+#     for i in arr:
+#         if i!=')' and i!='(':
+#             arr1+=i
+#     return arr1
+# print(remove_brackets('a+b-(9+c)=3'))
+# a+b-9+c=3
+
+''' 11 Write Program to remove duplicate elements in an array and sort it in Accending order(can not use predefined function).
+			Input: [Z, A, P, C, A, Z , K, N, C]
+			Output: [A, C, K,N, P, Z]
+'''
+# def cap_dup(arr):
+#      set1=set(arr)
+#      lst=list(set1)
+#      for i in range(len(lst)):
+#          for j in range(len(lst)):
+#              if ((ord(lst[i]))<(ord(lst[j]))):
+#                  temp=lst[i]
+#                  lst[i]=lst[j]
+#                  lst[j]=temp
+#      return lst
+# print(cap_dup(['Z','A','P','C','A','Z' ,'K','N','C']))
+# #['A', 'C', 'K', 'N', 'P', 'Z']
+
+''' 12 If subseq's  array  sequence is present in the array, returns true or else returns false.                                                    
+Let arr = [5, 7, 3, 2, 2, 7,-1, 5, -3, 13, 4]
+Example: 
+           Input : Subseq1 = [7, -1, 5, -3] Output:  true
+                      Subseq2 = [7, -1, 4, -3]            : false
+           Subseq3 = [ -1]                        : true
+                      Subseq4 = [13, -3, 4, 1]           : false
+'''
+'''Find sum of the Unique numbers: 
+Example : Let arr = [1, 2, 2, 1, 3, 5, 1];
+ The unique numbers are 1,2, 3, 5 so the sum should be 11.
+# '''
+# arr = [5, 7, 3, 2, 2, 7,-1, 5, -3, 13, 4]
+# sub_arry=[13, -3, 4, 1]
+# def sub_fun(r,sub_arr):
+#     c=0
+#     for i in range(len(sub_arry)):
+#         if arr[r]==sub_arr[i]:
+#             c+=1
+#         if r !=len(arr)-1:
+#             r+=1
+
+#     return(c)
+
+# for i in range(len(arr)):
+#     c=0
+#     if arr[i]==sub_arry[0]:
+#         res=sub_fun(i,sub_arry)
+#         if(res==len(sub_arry)):
+#             c=1
+#             break
+# if(c):
+#     print("true")
+# else:
+#     print("false")
+
+# true
+
+'''Find sum of the Unique numbers: 
+Example : Let arr = [1, 2, 2, 1, 3, 5, 1];
+ The unique numbers are 1,2, 3, 5 so the sum should be 11.
+'''
+'''# def sum_unique(arr):
+#     lst=[]
+#     for i in arr:
+#         if i not in lst:
+#             lst.append(i)
+#     sum=0
+#     for i in lst:
+#         sum+=i
+#     return sum
+# print(sum_unique([1, 2, 2, 1, 3, 5, 1,12]))
+# ##23'''
+
+# #-------------------------------------------------------------------------> akhil sir task 1 <--------------------------------------
+
+# arr=['mom','dad','hari','john','madam']
+# def is_palam(arr):
+#     for i in arr:
+#         if i==(i[::-1]):
+#             print(i)
+# is_palam(arr)
+# ------------------------------------------------------------------->Difficulty Level : Hard<---------------------------------------------------------------
+
+# n=3
+# for i in range(1,n+1):
+#         print(i*" *" )
+# for i in range(n-1,0,-1):
+#             print(i*" *")
+
+# Create a function that converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized.
+
+# Examples :
+# toCamelCase("A-B-C") ➞ "ABC"
+# toCamelCase("the-stealth-warrior") ➞ "theStealthWarrior"
+# toCamelCase("The_Stealth_Warrior") ➞ "TheStealthWarrior"
+
+
+# def toCamelCase(str1):
+#     str=''
+#     for i in str1:
+#         if(i!='_'and  i!='-'):
+#             str+=i
+
+#     print(str)
+# toCamelCase("the-stealth-warrior")
+# thestealthwarrior
+
+# 2 Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.
+# Examples :
+# numInStr(["1a", "a", "2b", "b"]) ➞ ["1a", "2b"]
+# numInStr(["abc", "abc10"]) ➞ ["abc10"]
+# numInStr(["abc", "ab10c", "a10bc", "bcd"]) ➞ ["ab10c", "a10bc"]
+# numInStr(["this is a test", "test1"]) ➞ ["test1"]
+
+
+# def numInStr(arr):
+#     lst=list()
+#     for j in arr:
+#         i=j.replace(" ","")
+#         c=0
+#         if (i.isalpha() or i.isdigit()):
+#             c=0
+#         else:
+#             c=1
+#         if(c):
+#             lst.append(i)
+#     return lst
+
+# print(numInStr(["1a", "a", "2b", "b"]))
+
+''' 3 # Write a function that takes a list of hours and returns the total weekly salary.
+The input list hours is listed sequentially, ordered from Monday to Sunday.
+A worker earns $10 an hour for the first 8 hours.
+For every overtime hour, he earns $15.
+On weekends, the employer pays double the usual rate, regardless how many hours were worked previously that week. For instance, 10 hours worked on a weekday would pay 80+30 = $110, but on a weekend it would pay 160+60 = $220.
+Examples :
+weeklySalary([8, 8, 8, 8, 8, 0, 0]) ➞ 400
+weeklySalary([10, 10, 10, 0, 8, 0, 0]) ➞ 410
+weeklySalary([0, 0, 0, 0, 0, 12, 0]) ➞ 280'''
+
+# def non_weekend(non):
+#     sum=0
+#     for n in non:
+#         for i in range(1,n+1):
+#             if(i<=8):
+#                 sum+=10
+#             else:
+#                 sum+=15
+#     return sum
+
+# def weekend(end):
+#     sum=0
+#     for n in end:
+#         for i in range(1,n+1):
+#             if(i<=8):
+#                 sum+=20
+#             else:
+#                 sum+=30
+#     return sum
+# def weeklySalary(arr):
+# 		non=list(arr[0:5:1])
+# 		res1=non_weekend(non)
+# 		end=list(arr[:-3:-1])
+# 		res2=weekend(end)
+# 		return(res1+res2)
+
+# # print(weeklySalary([8, 8, 8, 8, 8, 0, 0]))
+# # print(weeklySalary([10, 10, 10, 0, 8, 0, 0]))
+# print(weeklySalary([0, 0, 0, 0, 0, 12, 0]))
+##280
+
+'''Create a function which takes in an encoded string and returns an object according to the following example:
+Examples :
+parseCode("John000Doe000123") ➞ {
+firstName: "John",
+lastName: "Doe",
+id: "123"
+}
+parseCode("michael0smith004331") ➞ {
+firstName: "michael",
+lastName: "smith",
+id: "4331"
+}
+
+parseCode("Thomas00LEE0000043") ➞ {
+firstName: "Thomas",
+lastName: "LEE",
+id: "43"
+}
+# '''
+# def parseCode(arr):
+#     lst2=[]
+#     lst=arr.split('0')
+#     for i in lst:
+#        if i!=' ' and i!='':
+#            lst2.append(i)
+#     dec=dict()
+#     dec['firstName']=lst2[0]
+#     dec['lastName']=lst2[1]
+#     dec['id']=lst2[2]
+
+#     print(dec)
+# parseCode("Thomas00LEE0000043") #{'firstName': 'Thomas', 'lastName': 'LEE', 'id': '43'}
+# parseCode("michael0smith004331")   #{'firstName': 'michael', 'lastName': 'smith', 'id': '4331'}
+
+'''5 Create a function that takes the current day (e.g. "2022-09-30"), an array of date objects and returns the "current streak" (i.e. number of consecutive days in a row).
+Examples :
+currentStreak("2022-09-23", [
+{"date": "2022-09-18"},
+{"date": "2022-09-19"},
+{"date": "2022-09-21"},
+{"date": "2022-09-22"},
+{"date": "2022-09-23"}]) ➞ 3
+currentStreak("2022-09-25", [
+{"date": "2022-09-16"},
+{"date": "2022-09-17"},
+{"date": "2022-09-21"},
+{"date": "2022-09-22"},
+{"date": "2022-09-23"}]) ➞ 0
+'''
+# date="2022-09-23"
+# lst_dates=[]
+# dat=int(date[-2::1])
+# dec_dates=[{"date": "2022-09-16"},{"date": "2022-09-17"},{"date": "2022-09-21"},{"date": "2022-09-22"},{"date": "2022-09-23"}]
+# for i in dec_dates:
+#     lst_dates.append(i['date'])
+# lst=[]
+# for da in lst_dates:
+#    lst.append(int(da[-2::1]))
+# print(lst.reverse())
+# c=0
+# for i in range(len(lst)):
+#     if (dat-lst[i])==i:
+#         c+=1
+#     print((lst[i],dat))
+# print(c)
+##3
+
+# print hii five times
+# for _ in range(5):
+#     print("hiii")
+# arr = [1, 2, 3, 4, 5, 6, 7, 8]
+# no = int(input("enter a number "))
+# lst1=[]
+# lst2=[]
+# for i in range(0,len(arr)):
+#     if (i<=val-1):
+#         lst1.append(arr[i])
+#     else:
+#         lst2.append(arr[i])
+# lst1.sort(reverse=True)
+# lst2.sort(reverse=True)
+# print(lst1+lst2)
+# a=[]
+# def ichivalani_aduguraaa_ayya(arr):
+#     res=arr.reverse()
+#     print(res)
+# c=0
+# arr1=[]
+# for i in range(len(arr)):
+#     while(c==no):
+#         ichivalani_aduguraaa_ayya(arr1)
+#         # print(arr1)
+#         arr1.clear()
+#         # print("clear",arr1)
+#         c=0
+#     arr1.append(arr[i])
+#     c+=1
