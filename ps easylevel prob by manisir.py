@@ -610,7 +610,18 @@ Output     	:  false
 # test("apples")
 #
 
-
+# medplus coding quetion
+# def fun(arr):
+#     sum=0
+#     for i in range(len(arr)):
+#         if i%2==0:
+#             for j in range(len(arr[i])):
+#                 sum+=arr[i][j]
+#         else:
+#             sum+=arr[i][1]
+#     print(sum)
+# arr=[[1,2,3],[4,5,6],[7,8,9],[11,12,13],[14,15,16],[17,18,19],[20,21,22]]
+# fun(arr)
 
 
 
