@@ -557,6 +557,69 @@ pattern(10)'''
 #             break
 #         high_val+=1
 #         low_val-=1
+#
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.left = None
+#         self.right = None
+#
+# def inorder_traversal(root):
+#     if root:
+#         inorder_traversal(root.left)
+#         print(root.data, end=' ')
+#         inorder_traversal(root.right)
+#
+#
+# root = Node(12)
+# root.left = Node(7)
+# root.right = Node(17)
+# root.left.left = Node(5)
+# root.left.right = Node(9)
+# root.right.right = Node(22)
+#
+# print("In-order Traversal:")
+# inorder_traversal(root)
+#
+# # Sample tree
+# #       12
+# #      /  \
+# #     7   17
+# #    / \    \
+# #   5   9    22
+#
+# # class Node:
+# #     def __init__(self, key):
+# #         self.key = key
+# #         self.left = None
+# #         self.right = None
+# #
+# # def insert(root, key):
+# #     if root is None:
+# #         return Node(key)
+# #     if key < root.key:
+# #         root.left = insert(root.left, key)
+# #     else:
+# #         root.right = insert(root.right, key)
+# #     return root
+# #
+# # def inorder(root):
+# #     if root:
+# #         inorder(root.left)
+# #         print(root.key, end=' ')
+# #         inorder(root.right)
+# #
+# # # Insert nodes into BST
+# # root = None
+# # keys = [10, 5, 15, 3, 7, 12, 18]
+# # for key in keys:
+# #     root = insert(root, key)
+# #
+# # print("In-order after insertion:")
+# # inorder(root)
+# for i in range(1,10,2):
+#     print(i)
+
 
       
         
