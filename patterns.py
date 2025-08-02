@@ -29,6 +29,7 @@
 #      return arr
 # print(sorting([1,5,8,9,3,5,2,4]))
 # from tokenize import endpats
+from cgitb import small
 
 # n=6
 # c=n//2
@@ -330,7 +331,7 @@
 #
 # first_non(lst)
 #
-# num=1876321
+# num=1863721
 # max1=0
 # max2=0
 # while(num!=0):
@@ -340,14 +341,69 @@
 #             max1=rem
 #
 #      num=num//10
-#
+
 # print(max2)
 
-num=[1,3,2,4,5,8,7,6]
-max=0
-max1=0
-for i in num:
-    if max1<i:
-        max1=i
-        max = max1
-print(max)
+# num=[1,3,2,4,5,8,7,6]
+# max=0
+# max1=0
+# for i in num:
+#     if max1<i:
+#         max1=i
+#         max = max1
+# print(max)
+# class Student:
+#     def __init__(self,name,s1,s2,s3):
+#         self.name=name
+#         self.s1=s1
+#         self.s2=s2
+#         self.s3=s3
+#         self.avg=(self.s1+self.s2+self.s3)/3
+#         print(f"avardge of {self.name} is {self.avg}")
+# s1=Student("madhu",60,70,50)
+
+# num=55550
+# temp=str(num)
+# thousands=0
+# five=0
+# rem=0
+# while(num!=0):
+#     if num>1000:
+#         thousands=int(temp[0:len(temp)-3:])
+#         num=num-(thousands*1000)
+#         # print(num)
+#     elif num>500 and num<1000:
+#         five=five+1
+#         num=num-500
+#
+#     elif num<500:
+#         rem=num
+#         num=num-rem
+#         # print(num,rem)
+# print(f"\nthousndes:\t{thousands}\nfivehundereds:\t{five}\nremaing:\t{rem}")
+#
+# list=[[1,2,3],[4,5,6],[7,8,9]] #non digonal return
+# # # for i in range(len(list)):
+# # #     for j in range(len(list)):
+# # #         if (i!=j):
+# # #             print(list[i][j])
+# lst=[list[i][j]  for i in range(len(list)) for j in range(len(list)) if(i!=j)]
+# print(lst)
+
+num=162354
+
+def fun(num ,max1,max2):
+    print(num,max1,max2)
+    if num>=1:
+        rem=num%10
+        # print(rem)
+        if rem>max1:
+            max2=max1
+            max1=rem
+            # print(max1,max2,rem)
+        if max1>rem and rem>max2:
+            max2=rem
+        num=num//10
+        fun(num,max1,max2)
+    print(max2)
+fun(num,0,0)

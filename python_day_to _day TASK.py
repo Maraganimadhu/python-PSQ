@@ -324,7 +324,19 @@ employee_list = [
 # for i in employee_list:
 #     if i['age']>=18:
 #         print(i)
-    
+
+from datetime import  datetime
+# print(datetime.now())
+# print(datetime.strptime("2025/07/01","%Y/%m/%d"))
+date="01/07/2025"
+# def day_of_date(date
+print(datetime.strptime(date,"%d/%m/%Y"))
+# print(day_of_date(date))
+# day=date.strftime("%A")
+# print(datetime.now().weekday())
+# print(day)
+print(datetime.now().strftime("%A"))
+
         
 
 
